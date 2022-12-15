@@ -1,0 +1,12 @@
+.form-input{
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    /* border: 1px solid green; */
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* .form-input > input {
+    border: none;
+} */
