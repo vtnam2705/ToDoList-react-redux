@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, EDIT_TODO, FILTER_SEARCH, LIST_DONE, LIST_REMOVE_DONE, UPDATE_TODO } from "../Type/listToDoType"
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, FILTER_SEARCH, LIST_DONE, LIST_REMOVE_DONE, UPDATE_TODO, DELETE_COMPLETED_TODO } from "../Type/listToDoType"
 
 const initialState = {
     listToDo: [],
@@ -87,7 +87,7 @@ export const listReducer = (state = initialState, {type, payload}) => {
             }
         }
     }
-    case "DELETE_COMPLETED_TODO": {
+    case DELETE_COMPLETED_TODO: {
         return {
             ...state,
             listCompleted: state.listCompleted.filter(item => item.id !== payload)
